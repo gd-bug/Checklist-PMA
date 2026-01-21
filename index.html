@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checklist Harian PM-A</title>
+    <title>Checklist PM-A</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -159,6 +159,19 @@
             display: inline-block;
         }
 
+        .separator {
+            grid-column: 1 / -1;
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.9);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
         /* Responsiveness */
         @media (max-width: 768px) {
             .container {
@@ -210,8 +223,8 @@
                 <img src="https://app.spunindo.com/msjasset/storage/logo_small.png"
                     alt="Logo PT. Multi Spunindo Jaya Tbk.">
             </div>
-            <h1>CHECKLIST HARIAN</h1>
-            <p>Silakan pilih checklist harian yang ingin Anda isi untuk memastikan operasional berjalan dengan lancar
+            <h1>CHECKLIST PM-A</h1>
+            <p>Silakan pilih checklist yang ingin Anda isi untuk memastikan operasional berjalan dengan lancar
                 dan efisien</p>
         </header>
 
@@ -279,6 +292,8 @@
                         <div class="btn-desc">Pencatatan meteran listrik harian</div>
                     </div>
                 </a>
+
+                <div class="separator">Checklist Mingguan</div>
 
                 <a href="https://forms.office.com/Pages/DesignPageV2.aspx?origin=NeoPortalPage&subpage=design&id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__V-pYwJUNjlOTk5ZWUg4NTlHMFE4RExIM0NNVkdETy4u"
                     class="btn">
