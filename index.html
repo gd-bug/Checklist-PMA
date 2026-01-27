@@ -162,14 +162,60 @@
         .separator {
             grid-column: 1 / -1;
             text-align: center;
-            margin: 20px 0;
-            padding: 10px 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: rgba(255, 255, 255, 0.9);
-            border: 2px solid rgba(255, 255, 255, 0.2);
+            margin: 30px 0 20px 0;
+            padding: 15px 25px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+            border-radius: 12px;
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .separator::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .separator:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.35);
+        }
+
+        .separator:hover::before {
+            opacity: 1;
+        }
+
+        .separator.daily {
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.2), rgba(46, 204, 113, 0.1));
+            border-left: 4px solid #3498db;
+        }
+
+        .separator.weekly {
+            background: linear-gradient(135deg, rgba(241, 196, 15, 0.2), rgba(231, 76, 60, 0.1));
+            border-left: 4px solid #f1c40f;
+        }
+
+        .separator i {
+            margin-right: 10px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         /* Responsiveness */
@@ -224,121 +270,95 @@
                     alt="Logo PT. Multi Spunindo Jaya Tbk.">
             </div>
             <h1>CHECKLIST PM-A</h1>
-            <p>Silakan pilih checklist yang ingin Anda isi untuk memastikan operasional berjalan dengan lancar
-                dan efisien</p>
         </header>
 
         <main>
             <div class="buttons-container">
-                <div class="separator">Checklist Harian</div>
+                <div class="separator daily"><i class="fas fa-calendar-day"></i>Checklist Harian</div>
 
-                <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__V-pYwJUQ083UEFURUVIR1o2NExWMk02NzNJQ0RSQy4u&origin=QRCode"
-                    class="btn">
-                    <i class="fas fa-list-check"></i>
-                    <div class="btn-content">
-                        <div class="btn-title">Checklist Harian Reproses</div>
-                        <div class="btn-desc">Form untuk proses reproses harian</div>
-                    </div>
-                </a>
-
-                <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__V-pYwJURFFLVldOVjFNR0xRVjU0OUs5MU1GSDZQRi4u&origin=QRCode"
-                    class="btn">
-                    <i class="fas fa-fan"></i>
-                    <div class="btn-content">
-                        <div class="btn-title">Checklist Harian Cooling Tower Chiller</div>
-                        <div class="btn-desc">Pemantauan cooling tower chiller</div>
-                    </div>
-                </a>
-
-                <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__V-pYwJUQlUyTVBISTMxNTcwSFhCRUo1RTBONDYxNS4u&origin=QRCode"
-                    class="btn">
+                <a href="https://forms.office.com/r/nkJNg47cs1?origin=lprLink" class="btn">
                     <i class="fas fa-snowflake"></i>
                     <div class="btn-content">
-                        <div class="btn-title">Checklist Harian Chiller</div>
-                        <div class="btn-desc">Inspeksi harian sistem chiller</div>
+                        <div class="btn-title">Chiller</div>
                     </div>
                 </a>
 
-                <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__V-pYwJUOFA5Tk5RNjZJSTJIRVpOWktET05PNVVJUi4u&origin=QRCode"
-                    class="btn">
+                <a href="https://forms.office.com/r/y2PKi8DecE?origin=lprLink" class="btn">
+                    <i class="fas fa-fan"></i>
+                    <div class="btn-content">
+                        <div class="btn-title">Cooling Tower Chiller</div>
+                    </div>
+                </a>
+
+                <a href="https://forms.office.com/r/b3KaR6geJk?origin=lprLink" class="btn">
                     <i class="fas fa-compress-alt"></i>
                     <div class="btn-content">
-                        <div class="btn-title">Checklist Harian Kompresor</div>
-                        <div class="btn-desc">Pengecekan kompresor harian</div>
+                        <div class="btn-title">Kompresor</div>
                     </div>
                 </a>
 
-                <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__V-pYwJURVJNUDIzRzVXWllDNE9LRU8xT0NNWEg4Ri4u&origin=QRCode"
-                    class="btn">
-                    <i class="fas fa-industry"></i>
-                    <div class="btn-content">
-                        <div class="btn-title">Checklist Harian Line 2</div>
-                        <div class="btn-desc">Inspeksi harian untuk line produksi 2</div>
-                    </div>
-                </a>
-
-                <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__V-pYwJUM0NSV1NKMjhWM0g4NzNVVFJSNVdHTVIxOS4u&origin=QRCode"
-                    class="btn">
+                <a href="https://forms.office.com/r/zC8CjATpbB?origin=lprLink" class="btn">
                     <i class="fas fa-cogs"></i>
                     <div class="btn-content">
-                        <div class="btn-title">Checklist Harian Line 1</div>
-                        <div class="btn-desc">Inspeksi harian untuk line produksi 1</div>
+                        <div class="btn-title">Line 1</div>
                     </div>
                 </a>
 
-                <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__V-pYwJUODRFSExGMTlUVjI0VUVYTVVWOUM4UUhPMS4u&origin=QRCode"
-                    class="btn">
+                <a href="https://forms.office.com/r/ytgvigfpQq?origin=lprLink" class="btn">
+                    <i class="fas fa-industry"></i>
+                    <div class="btn-content">
+                        <div class="btn-title">Line 2</div>
+                    </div>
+                </a>
+
+                <a href="https://forms.office.com/r/iEU1L9vs2S?origin=lprLink" class="btn">
                     <i class="fas fa-bolt"></i>
                     <div class="btn-content">
-                        <div class="btn-title">Checklist Harian Record Meter Listrik</div>
-                        <div class="btn-desc">Pencatatan meteran listrik harian</div>
+                        <div class="btn-title">Record Meter Listrik</div>
                     </div>
                 </a>
 
-                <div class="separator">Checklist Mingguan</div>
-
-                <a href="https://forms.office.com/Pages/DesignPageV2.aspx?origin=NeoPortalPage&subpage=design&id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__V-pYwJUNjlOTk5ZWUg4NTlHMFE4RExIM0NNVkdETy4u"
-                    class="btn">
-                    <i class="fas fa-plug"></i>
+                <a href="https://forms.office.com/r/ELH2wXhY38?origin=lprLink" class="btn">
+                    <i class="fas fa-list-check"></i>
                     <div class="btn-content">
-                        <div class="btn-title">Checklist Mingguan Power Mesin Produksi</div>
-                        <div class="btn-desc">Checklist mingguan untuk power mesin produksi</div>
+                        <div class="btn-title">Reproses</div>
                     </div>
                 </a>
 
-                <a href="https://forms.office.com/Pages/DesignPageV2.aspx?origin=NeoPortalPage&subpage=design&id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__V-pYwJUM000NFZFQUhTSFdMRzFURldNS0VWTjQ5Ni4u"
-                    class="btn">
-                    <i class="fas fa-wave-square"></i>
-                    <div class="btn-content">
-                        <div class="btn-title">Checklist Mingguan Vibration Utility</div>
-                        <div class="btn-desc">Checklist mingguan untuk vibration utility</div>
-                    </div>
-                </a>
+                <div class="separator weekly"><i class="fas fa-calendar-week"></i>Checklist Mingguan</div>
 
-                <a href="https://forms.office.com/Pages/DesignPageV2.aspx?origin=NeoPortalPage&subpage=design&id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__V-pYwJUMjdURE9PWjdHS09NNjBaTzRBNVY0U0xXQy4u"
-                    class="btn">
-                    <i class="fas fa-wave-square"></i>
-                    <div class="btn-content">
-                        <div class="btn-title">Checklist Mingguan Vibration Line 2</div>
-                        <div class="btn-desc">Checklist mingguan untuk vibration line 2</div>
-                    </div>
-                </a>
-
-                <a href="https://forms.office.com/Pages/DesignPageV2.aspx?origin=NeoPortalPage&subpage=design&id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__V-pYwJUNjA5NDA3M1lOQjI2T09XVDM0T0laQzZCUy4u"
-                    class="btn">
-                    <i class="fas fa-wave-square"></i>
-                    <div class="btn-content">
-                        <div class="btn-title">Checklist Mingguan Vibration Line 1</div>
-                        <div class="btn-desc">Checklist mingguan untuk vibration line 1</div>
-                    </div>
-                </a>
-
-                <a href="https://forms.office.com/Pages/DesignPageV2.aspx?origin=NeoPortalPage&subpage=design&id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__V-pYwJUOVFDUk82N1hCUFFWMUMzMVJITjhaVzJRQi4u"
-                    class="btn">
+                <a href="https://forms.office.com/r/dfgqnFGFMs?origin=lprLink" class="btn">
                     <i class="fas fa-warehouse"></i>
                     <div class="btn-content">
-                        <div class="btn-title">Checklist Mingguan Area Crystalizer & Silo</div>
-                        <div class="btn-desc">Checklist mingguan untuk area crystalizer & silo</div>
+                        <div class="btn-title">Area Crystalizer & Silo</div>
+                    </div>
+                </a>
+
+                <a href="https://forms.office.com/r/dV6ygvvZPa?origin=lprLink" class="btn">
+                    <i class="fas fa-plug"></i>
+                    <div class="btn-content">
+                        <div class="btn-title">Power Mesin Produksi</div>
+                    </div>
+                </a>
+
+                <a href="https://forms.office.com/r/dnqh4n71wk?origin=lprLink" class="btn">
+                    <i class="fas fa-wave-square"></i>
+                    <div class="btn-content">
+                        <div class="btn-title">Vibration Line 1</div>
+                    </div>
+                </a>
+
+                <a href="https://forms.office.com/r/U8y6tywsmh?origin=lprLink" class="btn">
+                    <i class="fas fa-wave-square"></i>
+                    <div class="btn-content">
+                        <div class="btn-title">Vibration Line 2</div>
+                    </div>
+                </a>
+
+                <a href="https://forms.office.com/r/QawRwFun4p?origin=lprLink" class="btn">
+                    <i class="fas fa-wave-square"></i>
+                    <div class="btn-content">
+                        <div class="btn-title">Vibration Utility</div>
                     </div>
                 </a>
             </div>
